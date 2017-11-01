@@ -22,8 +22,13 @@ class VendingMachineImpl implements VendingMachine {
 	}
 
 	private initialize() : void {
-		for( let i : Coin) {
-			this.cashInventory.push(i);
+		//cash init
+		for( let index = 0; index < 5; index++ ) {
+			this.cashInventory[index] = new Coin();
+		}
+		//item init
+		for( let index = 0; index < 5; index++ ) {
+			this.itemInventory[index] = new Item();
 		}
 	}
 }
