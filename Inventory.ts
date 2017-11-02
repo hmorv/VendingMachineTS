@@ -9,8 +9,11 @@ class Inventory {
 	public add() : void {}
 	public clear() : void {}
 	public deduct() : void {}
-	public getQuantity() : number {}
-	public hasItem() : boolean {}
+	public getQuantity( item : Item ) : number {
+		let value : number = this.inventory.find(item);
+		return value == null ? 0 : value;
+	}
+	public hasItem() : boolean { return true }
 	public put() : void {}
 }
 
