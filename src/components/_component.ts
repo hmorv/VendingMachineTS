@@ -1,7 +1,7 @@
 namespace VendingMachine {
 	export abstract class Component {
 		private childComponents: Array<Component> = [];
-		private listeners: { [eventName: string]: Array<Function> } = [];
+		private listeners: { [eventName: string]: Array<Function> } = {};
 
 		public render(parentElement: Element): void {
 			let childrenContainer = this.renderSelf(parentElement);
